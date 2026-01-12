@@ -10,6 +10,9 @@ export default function NavBar() {
                 <li>
                     <Link to='/contact'>Contato</Link>
                 </li>
+                <li>
+                    <Link to='/todo'>Todo List</Link>
+                </li>
             </ul>
         </nav>
     )

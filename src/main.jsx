@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import Contato from './routes/Contact.jsx'
 import { ThemeProvider } from './context/Theme_Context.jsx'
+import Todo from './routes/Todo.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {path: '/', element: <Home />},
-      {path: '/contact', element: <Contato />}
+      {path: '/contact', element: <Contato />},
+      {path: '/todo', element: <Todo />}
     ]
   }
 ])
