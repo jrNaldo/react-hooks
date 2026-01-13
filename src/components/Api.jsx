@@ -25,7 +25,7 @@ export default function Api() {
         <form action="">
             <label>Requisição Api(Rick and Morty): </label>
             <input type="text" value={text} onChange={e => setText(e.target.value)}/>
-            
+        
             {data && (
                 <ul>
                     {data.map(d => (

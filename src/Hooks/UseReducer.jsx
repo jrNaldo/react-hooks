@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react"
+import { useId, useReducer, useState } from "react"
 
 const initialState = {
     count: 0
@@ -35,6 +35,7 @@ function reducer(state, action){
 export default function UseReducer() {
     const [state, dispatch] = useReducer(reducer, initialState)
     const [customCount, setCustomCount] = useState(0)
+    const id = useId()
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -60,9 +61,15 @@ export default function UseReducer() {
                 -1
             </button>
 
-            <form action="" onSubmit={handleSubmit}>
-                <label>Mudar Count: </label>
-                <input type="number" id="customCount" value={customCount} onChange={e => setCustomCount(e.target.value)}/>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor={id}>Mudar Count: </label>
+                <input
+                    id={id}
+                    type="number" 
+                    value={customCount} 
+                    onChange={e => setCustomCount(e.target.value)}
+                />
+
                 <button type="submit">Mudar</button>
             </form>
         </div>

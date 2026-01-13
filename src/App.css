@@ -28,7 +28,13 @@
     background-color: dodgerblue;
     list-style-type: none;
     padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
 }
 .decoration {
-    text-decoration: underline;
+    text-decoration: line-through;
+}
+
+.input { 
+    border-radius: .5rem;
 }
